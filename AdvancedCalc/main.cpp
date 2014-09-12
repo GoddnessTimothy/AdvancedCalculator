@@ -101,7 +101,8 @@ int main(int argc, const char * argv[])
                 "\tVolume of a cylinder\n"
                 "\tSurface area of a cylinder\n"
                 "\tSurface area of a cube (NEW!)\n"
-                "\tPerimeter of a cube (NEW!)";
+                "\tPerimeter of a cube (NEW!)"
+                "\tTesting new commit!";
      cout<<endl<<endl;
 
       //Program starts here and loops infinitely until the user triggers the else statement, enters a non-double or negative value
