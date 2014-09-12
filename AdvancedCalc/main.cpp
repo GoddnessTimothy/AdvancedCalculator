@@ -56,6 +56,9 @@ int main(int argc, const char * argv[])
 	  double circleRadius;
 	  double sphereHeight;
 	  double cubeEdge;
+	  double a,b,c;
+	  double quadAnsNeg;
+
 
 	  double circleArea; //Done!
 	  double circleCircumference; //Done!
@@ -66,6 +69,7 @@ int main(int argc, const char * argv[])
 	  double cubeVolume;
 	  double cubePerimeter;
 	  double cubeSA;
+	  double quadradic;
 
 	  /*TODO
           Cube:
@@ -221,7 +225,23 @@ int main(int argc, const char * argv[])
             }
         cubePerimeter = 12*cubeEdge;
         cout<<"The perimeter of the cube is: "<<cubePerimeter<<endl;
+
+
+	  cout<<"===========Quadradic Equation Calculator"<<endl;
+	  cout<<"Enter value of a"<<endl;
+	  cin >> a;
+	  cout<<"Enter value of b"<<endl;
+	  cin >> b;
+	  cout<<"Enter value of c"<<endl;
+	  cin >>c;
+
+	  quadradic = -(b+sqrt(pow(b,2))-4*a*c)/2*a;
+	  quadAnsNeg = -(b-sqrt(pow(b,2))-4*a*c)/2*a;
+	  cout<<"Answer: "<<quadradic<<" and "<<quadAnsNeg<<endl;
+
 	  }
+
+
 
 
 
