@@ -67,10 +67,10 @@ int main(int argc, const char * argv[])
 	 double sphereVolume; //Done!
 	 double cylinderSA;//Done!
 	 double cylinderVolume;//Done!
-	 double cubeVolume;
-	 double cubePerimeter;
-	 double cubeSA;
-	 double quadratic;
+	 double cubeVolume;//Done!
+	 double cubePerimeter;//Done!
+	 double cubeSA;//Done!
+	 double quadratic;//Done!
 	 
 	 /*TODO
 	  Cube:
@@ -238,7 +238,7 @@ int main(int argc, const char * argv[])
 		  
 		  //Seperate into 3 parts to make things easier.  I can probaly use only two parts.  Good luck trying to
 		  //enter the entire quadratic formula!
-		  quadA = -1 * b;
+		   quadA = -1 * b;
 		   quadB = sqrt(pow(b, 2)-4*a*c);
 		   quadC = 2*a;
 		   
