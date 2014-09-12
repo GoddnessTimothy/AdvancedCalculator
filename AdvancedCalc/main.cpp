@@ -228,7 +228,7 @@ int main(int argc, const char * argv[])
 		  cout<<"The perimeter of the cube is: "<<cubePerimeter<<endl;
 		  
 		  
-		  cout<<"===========Quadradic Equation Calculator================"<<endl;
+		/*  cout<<"===========Quadradic Equation Calculator================"<<endl;
 		  cout<<"Enter value of a"<<endl;
 		  cin >> a;
 		  cout<<"Enter value of b"<<endl;
@@ -238,7 +238,7 @@ int main(int argc, const char * argv[])
 		  
 		  //Seperate into 3 parts to make things easier.  I can probaly use only two parts.  Good luck trying to
 		  //enter the entire quadratic formula!
-		  /* quadA = -1 * b;
+		  quadA = -1 * b;
 		   quadB = sqrt(pow(b, 2))-4*a*c;
 		   quadC = 2*a;
 		   
