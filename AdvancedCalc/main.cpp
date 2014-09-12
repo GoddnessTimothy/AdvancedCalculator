@@ -70,7 +70,7 @@ int main(int argc, const char * argv[])
 	 double cubeVolume;
 	 double cubePerimeter;
 	 double cubeSA;
-	 double quadradic;
+	 double quadratic;
 	 
 	 /*TODO
 	  Cube:
@@ -238,14 +238,14 @@ int main(int argc, const char * argv[])
 		  
 		  //Seperate into 3 parts to make things easier.  I can probaly use only two parts.  Good luck trying to
 		  //enter the entire quadratic formula!
-		  quadA = -1 * b;
-		  quadB = sqrt(pow(b, 2))-4*a*c;
-		  quadC = 2*a;
-		  
-		  quadradic = (quadA - quadB)/quadC;
-		  quadAnsNeg = (quadA +quadB)/quadC;
-		  
-		  cout<<"Answer is "<<quadradic<<" and "<< quadAnsNeg<<endl;
+		  /* quadA = -1 * b;
+		   quadB = sqrt(pow(b, 2))-4*a*c;
+		   quadC = 2*a;
+		   
+		   quadratic = (quadA - quadB)/quadC;
+		   quadAnsNeg = (quadA +quadB)/quadC;
+		   
+		   cout<<"Answer is "<<quadratic<<" and "<< quadAnsNeg<<endl;*/
 		  
 		  
 		  
