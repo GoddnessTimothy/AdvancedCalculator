@@ -1,4 +1,5 @@
 #include <iostream>
+#include <complex>
 #include <math.h>
 using namespace std;
 int main(int argc, const char * argv[])
@@ -57,7 +58,7 @@ int main(int argc, const char * argv[])
 	 double sphereHeight;
 	 double cubeEdge;
 	 double a,b,c;
-	 double quadA,quadB,quadC;
+	 double quadA,quadB,quadC,quadD;
 	 double quadAnsNeg;
 	 
 	 
@@ -99,15 +100,15 @@ int main(int argc, const char * argv[])
      cout << endl<<endl;
 	 
      cout <<"List of features:\n"
-		  "\tArea of a circle\n"
-		  "\tCircumference of a circle\n"
-		  "\tSurface Area of a sphere\n"
-			   "\tVolume of a sphere\n"
-		  "\tVolume of a cylinder\n"
-		  "\tSurface area of a cylinder\n"
-		  "\tSurface area of a cube (NEW!)\n"
-		  "\tPerimeter of a cube (NEW!)"
-		  "\tTesting new commit!";
+	 "\tArea of a circle\n"
+	 "\tCircumference of a circle\n"
+	 "\tSurface Area of a sphere\n"
+	 "\tVolume of a sphere\n"
+	 "\tVolume of a cylinder\n"
+	 "\tSurface area of a cylinder\n"
+	 "\tSurface area of a cube (NEW!)\n"
+	 "\tPerimeter of a cube (NEW!)"
+	 "\tTesting new commit!";
      cout<<endl<<endl;
 	 
 	 //Program starts here and loops infinitely until the user triggers the else statement, enters a non-double or negative value
@@ -229,23 +230,40 @@ int main(int argc, const char * argv[])
 		  
 		  
 		  cout<<"===========Quadradic Equation Calculator============="<<endl;
+		  /*Conditions
+		   denominator cannot be 0
+		   Value inside radical cannot be negative
+		   */
 		  cout<<"Enter value of a"<<endl;
 		  cin >> a;
+		  if (a == 0 ){
+			   break;
+		  }
 		  cout<<"Enter value of b"<<endl;
 		  cin >> b;
+		  
 		  cout<<"Enter value of c"<<endl;
 		  cin >>c;
 		  
 		  //Seperate into 3 parts to make things easier.  I can probaly use only two parts.  Good luck trying to
 		  //enter the entire quadratic formula!
-		   quadA = -1 * b;
-		   quadB = sqrt(pow(b, 2)-4*a*c);
-		   quadC = 2*a;
-		   
-		   quadratic = (quadA - quadB)/quadC;
-		   quadAnsNeg = (quadA +quadB)/quadC;
-		   
-		   cout<<"Answer is "<<quadratic<<" and "<< quadAnsNeg<<endl;
+		  quadA = -1 * b;
+		  quadB = sqrt(pow(b, 2)-4*a*c);
+		  quadC = 2*a;
+		  quadD = pow(b, 2)-4*a*c;
+		  //value inside radical is negative
+		  if (quadB < 0){
+			   break;
+		  }//denomiator is 0
+		  else if (quadC == 0){
+			   break;
+		  }else if (quadD < 0){
+			   break;
+		  }
+		  
+		  quadratic = (quadA - quadB)/quadC;
+		  quadAnsNeg = (quadA +quadB)/quadC;
+		  cout<<"Answer is "<<quadratic<<" and "<< quadAnsNeg<<endl;
 		  
 		  
 		  
