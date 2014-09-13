@@ -88,7 +88,6 @@ int main(int argc, const char * argv[])
 	  6.  Quadratic forumla
 	  7.  sqaureRoot(a^2 +b^2+c^2)
 	  Frustum
-	  
 	  */
 	 
      /*Do not have to show the greeting everytime the program loops.  Only need to show it once!
@@ -108,7 +107,7 @@ int main(int argc, const char * argv[])
 	 "\tSurface area of a cylinder\n"
 	 "\tSurface area of a cube (NEW!)\n"
 	 "\tPerimeter of a cube (NEW!)"
-	 "\tTesting new commit!";
+	 "\tQuadratic Equation Calculator\n";
      cout<<endl<<endl;
 	 
 	 //Program starts here and loops infinitely until the user triggers the else statement, enters a non-double or negative value
@@ -128,6 +127,7 @@ int main(int argc, const char * argv[])
 		  cout <<"Enter the radius: "<<endl;
 		  cin >> circleRadius;
           if (circleRadius < 0.0 ){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  circleCircumference = 2.0*pi*circleRadius;
@@ -138,6 +138,7 @@ int main(int argc, const char * argv[])
 		  cout <<"Enter the radius: "<<endl;
 		  cin >>sphereRadius;
           if (sphereRadius < 0.0 ){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  };
 		  //Surface Area = 4 * pi * r^2
@@ -150,12 +151,14 @@ int main(int argc, const char * argv[])
 		  cin >> sphereRadius;
 		  
           if (sphereRadius < 0.0 ){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  cout <<"Enter the height of the sphere: "<<endl;
 		  cin >> sphereHeight;
 		  
           if (sphereHeight < 0.0 ){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  
@@ -171,11 +174,13 @@ int main(int argc, const char * argv[])
 		  cout <<"Enter the radius: "<<endl;
 		  cin >> cylinderRadius;
 		  if (cylinderRadius < 0.0){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  cout <<"Enter the height: "<<endl;
 		  cin >> cylinderHeight;
 		  if(cylinderHeight < 0.0){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  cylinderVolume = cylinderHeight * pi * pow(cylinderRadius,2.0);
@@ -186,11 +191,13 @@ int main(int argc, const char * argv[])
 		  
 		  cin >>cylinderRadius;
 		  if(cylinderRadius < 0.0){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  cout<<"Enter the height: "<<endl;
 		  cin >> cylinderHeight;
 		  if (cylinderHeight < 0.0){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  cylinderSA = (2.0*pi*cylinderRadius*cylinderHeight) + (2.0*pi*pow(cylinderRadius,2));
@@ -205,6 +212,7 @@ int main(int argc, const char * argv[])
 		  cout<<"Number of edges: "<<endl;
 		  cin >>cubeEdge;
 		  if(cubeEdge < 0){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  cubeVolume = pow(cubeEdge,3);
@@ -214,6 +222,7 @@ int main(int argc, const char * argv[])
 		  cout<<"Number of edges: "<<endl;
 		  cin >> cubeEdge;
 		  if(cubeEdge < 0){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  cubeSA = 6*pow(cubeEdge,2);
@@ -223,6 +232,7 @@ int main(int argc, const char * argv[])
 		  cout<<"Number of edges: "<<endl;
 		  cin >> cubeEdge;
 		  if(cubeEdge <0){
+			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
 		  cubePerimeter = 12*cubeEdge;
@@ -234,10 +244,12 @@ int main(int argc, const char * argv[])
 		   denominator cannot be 0
 		   Value inside radical cannot be negative
 		   */
+		  
+		  cout<<"Please note that imaginary numbers are not yet supported.  If the value under the radical is negative, the program will exit.  Simarily, the denomiator cannot be equal to 0."<<endl;
 		  cout<<"Enter value of a"<<endl;
 		  cin >> a;
 		  if (a == 0 ){
-			   cout <<"value of a cannot be equal to 0!"<<endl;
+			   cout <<"value of 'a' cannot be equal to 0!"<<endl;
 			   break;
 		  }
 		  cout<<"Enter value of b"<<endl;
@@ -248,28 +260,28 @@ int main(int argc, const char * argv[])
 		  
 		  //Seperate into 3 parts to make things easier.  I can probaly use only two parts.  Good luck trying to
 		  //enter the entire quadratic formula!
+		  
+		  
 		  quadA = -1 * b;
 		  quadB = sqrt(pow(b, 2)-4*a*c);
 		  quadC = 2*a;
 		  quadD = pow(b, 2)-4*a*c;
 		  //value inside radical is negative
 		  if (quadB < 0){
-			   
 			   break;
 		  }//denomiator is 0
 		  else if (quadC == 0){
 			   cout <<"Demoniator must be greater than 0!"<< endl;
 			   break;
+			   //Value under radical is negative
 		  }else if (quadD < 0){
+			   cout <<"The value under the radical cannot be less than 0!"<<endl;
 			   break;
 		  }
 		  
 		  quadratic = (quadA - quadB)/quadC;
 		  quadAnsNeg = (quadA +quadB)/quadC;
 		  cout<<"Answer is "<<quadratic<<" and "<< quadAnsNeg<<endl;
-		  
-		  
-		  
 	 }
 	 
 	 
