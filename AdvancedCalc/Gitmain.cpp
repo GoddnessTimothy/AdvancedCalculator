@@ -1,6 +1,6 @@
 #include <iostream>
-#include <complex>
 #include <math.h>
+#include <string>
 using namespace std;
 int main(int argc, const char * argv[])
 {
@@ -50,6 +50,9 @@ int main(int argc, const char * argv[])
 	 //pi will always be this value.  Constants do not change
 	 double const pi = 3.14159;
 	 
+	 
+	 string solveDistanceUnits;
+	 string cubeUnits;
 	 //Sort variables by type
 	 double cylinderRadius;
 	 double cylinderHeight;
@@ -60,7 +63,9 @@ int main(int argc, const char * argv[])
 	 double a,b,c;
 	 double quadA,quadB,quadC,quadD;
 	 double quadAnsNeg;
-	 
+	 double distance;
+	 double time;
+	 double speed;
 	 
 	 double circleArea; //Done!
 	 double circleCircumference; //Done!
@@ -94,6 +99,7 @@ int main(int argc, const char * argv[])
 	  Second cout statement does not show in console.  USed '\n' for new line instead.  Same functionality
 	  Able to show muti-line text without using multiple cout statements.  Must have start and end quotes for each new line of text
 	  */
+	 
      cout << "Hello! I am an advanced Geometric Calculator v0.1!\n"
      "Note: I hardcoded the value of pi to be '3.14159' ";
      cout << endl<<endl;
@@ -106,7 +112,7 @@ int main(int argc, const char * argv[])
 	 "\tVolume of a cylinder\n"
 	 "\tSurface area of a cylinder\n"
 	 "\tSurface area of a cube (NEW!)\n"
-	 "\tPerimeter of a cube (NEW!)"
+	 "\tPerimeter of a cube (NEW!)\n"
 	 "\tQuadratic Equation Calculator\n";
      cout<<endl<<endl;
 	 
@@ -208,7 +214,8 @@ int main(int argc, const char * argv[])
 		   Volume: a^3; a is the edge
 		   Surface Area = 6a^2
 		   Perimeter of a cube = 12a;  12 edges in a cube*/
-		  
+		  cout<<"What units do you want to use?" <<endl;
+		  cin >> cubeUnits;
 		  cout<<"Number of edges: "<<endl;
 		  cin >>cubeEdge;
 		  if(cubeEdge < 0){
@@ -216,7 +223,7 @@ int main(int argc, const char * argv[])
 			   break;
 		  }
 		  cubeVolume = pow(cubeEdge,3);
-		  cout<<"The volume of the cube is: "<<cubeVolume<<endl;
+		  cout<<"The volume of the cube is: "<<cubeVolume<<" "<<cubeUnits<<endl;
 		  
 		  cout<<"=================Surface Area of a Cube=============="<<endl;
 		  cout<<"Number of edges: "<<endl;
@@ -226,17 +233,17 @@ int main(int argc, const char * argv[])
 			   break;
 		  }
 		  cubeSA = 6*pow(cubeEdge,2);
-		  cout<<"The surface area of the cube is: "<<cubeSA<<endl;
+		  cout<<"The surface area of the cube is: "<<cubeSA<<" " <<cubeUnits<<endl;
 		  
 		  cout <<"===============Perimeter of a cube================="<<endl;
 		  cout<<"Number of edges: "<<endl;
 		  cin >> cubeEdge;
 		  if(cubeEdge <0){
-			   cout<<"The length cannot be negative!"<<endl;
+			   cout<<"The length cannot be negative!"<<cubeUnits<<endl;
 			   break;
 		  }
 		  cubePerimeter = 12*cubeEdge;
-		  cout<<"The perimeter of the cube is: "<<cubePerimeter<<endl;
+		  cout<<"The perimeter of the cube is: "<<cubePerimeter<<" " <<cubeUnits<<endl;
 		  
 		  
 		  cout<<"===========Quadradic Equation Calculator============="<<endl;
@@ -282,23 +289,18 @@ int main(int argc, const char * argv[])
 		  quadratic = (quadA - quadB)/quadC;
 		  quadAnsNeg = (quadA +quadB)/quadC;
 		  cout<<"Answer is "<<quadratic<<" and "<< quadAnsNeg<<endl;
+		  
+		  cout <<"============Distance calculator=========="<<endl;
+		  cout<<"Enter the speed: "<<endl;
+		  cin >> speed;
+		  cout<<"Enter the time: "<<endl;
+		  cin >> time;
+		  distance = speed * time;
+		  cout<<"Enter units: "<<endl;
+		  cin >> solveDistanceUnits;
+		  cout<<"The distance is: "<<distance<<" "<<solveDistanceUnits<<endl;
+		  
 	 }
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 
-	 /*double score1,score2,score3,score4,score5;
-	  cout << "Input scores [5]" << endl;
-	  cin >> score1 >> score2 >> score3 >> score4 >> score5;
-	  double average = (score1+score2+score3+score4+score5)/5.0;
-	  cout << "Average is " << average << endl;*/
-	 
 	 
 	 return 0;
 }
