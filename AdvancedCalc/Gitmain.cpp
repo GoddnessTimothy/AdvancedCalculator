@@ -237,6 +237,7 @@ int main(int argc, const char * argv[])
 		  cout<<"Enter value of a"<<endl;
 		  cin >> a;
 		  if (a == 0 ){
+			   cout <<"value of a cannot be equal to 0!"<<endl;
 			   break;
 		  }
 		  cout<<"Enter value of b"<<endl;
@@ -253,9 +254,11 @@ int main(int argc, const char * argv[])
 		  quadD = pow(b, 2)-4*a*c;
 		  //value inside radical is negative
 		  if (quadB < 0){
+			   
 			   break;
 		  }//denomiator is 0
 		  else if (quadC == 0){
+			   cout <<"Demoniator must be greater than 0!"<< endl;
 			   break;
 		  }else if (quadD < 0){
 			   break;
