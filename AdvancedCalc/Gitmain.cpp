@@ -99,15 +99,15 @@ int main(int argc, const char * argv[])
      cout << endl<<endl;
 	 
      cout <<"List of features:\n"
-	 "\tArea of a circle\n"
-	 "\tCircumference of a circle\n"
-	 "\tSurface Area of a sphere\n"
-	 "\tVolume of a sphere\n"
-	 "\tVolume of a cylinder\n"
-	 "\tSurface area of a cylinder\n"
-	 "\tSurface area of a cube (NEW!)\n"
-	 "\tPerimeter of a cube (NEW!)"
-	 "\tTesting new commit!";
+		  "\tArea of a circle\n"
+		  "\tCircumference of a circle\n"
+		  "\tSurface Area of a sphere\n"
+			   "\tVolume of a sphere\n"
+		  "\tVolume of a cylinder\n"
+		  "\tSurface area of a cylinder\n"
+		  "\tSurface area of a cube (NEW!)\n"
+		  "\tPerimeter of a cube (NEW!)"
+		  "\tTesting new commit!";
      cout<<endl<<endl;
 	 
 	 //Program starts here and loops infinitely until the user triggers the else statement, enters a non-double or negative value
@@ -180,7 +180,7 @@ int main(int argc, const char * argv[])
 		  cylinderVolume = cylinderHeight * pi * pow(cylinderRadius,2.0);
 		  cout<<"The volume is: "<<cylinderVolume<<endl;
 		  
-		  cout <<"================Surface Area of a cylinder=================="<<endl;
+		  cout <<"================Surface Area of a cylinder=========="<<endl;
 		  cout<<"Enter the radius: "<<endl;
 		  
 		  cin >>cylinderRadius;
@@ -228,7 +228,7 @@ int main(int argc, const char * argv[])
 		  cout<<"The perimeter of the cube is: "<<cubePerimeter<<endl;
 		  
 		  
-		cout<<"===========Quadradic Equation Calculator================"<<endl;
+		  cout<<"===========Quadradic Equation Calculator============="<<endl;
 		  cout<<"Enter value of a"<<endl;
 		  cin >> a;
 		  cout<<"Enter value of b"<<endl;
