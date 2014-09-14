@@ -61,7 +61,6 @@ int main(int argc, const char * argv[])
 	 double cylinderHeight;
 	 double sphereRadius;
 	 double circleRadius;
-	 double sphereHeight;
 	 double cubeEdge;
 	 double a,b,c;
 	 double quadA,quadB,quadC,quadD;
@@ -150,7 +149,7 @@ int main(int argc, const char * argv[])
 			   break;
 		  };
 		  //Surface Area = 4 * pi * r^2
-		  sphereSA = 4*pi*pow(sphereRadius,2.0);
+		  sphereSA = 4*pi*pow(sphereRadius,3.0);
 		  cout <<"The surface area is: "<<sphereSA<<endl;
 		  
 		  
@@ -164,15 +163,9 @@ int main(int argc, const char * argv[])
 			   break;
 		  }
 		  cout <<"Enter the height of the sphere: "<<endl;
-		  cin >> sphereHeight;
 		  
-          if (sphereHeight <= 0.0 ){
-			   cout<<"The length cannot be negative!"<<endl;
-			   break;
-		  }
-		  
-		  //Volume = pi * r^2 * h
-		  sphereVolume = pi * pow(sphereRadius,2.0);
+		  //Volume = (4 * pi * r^2)/3
+		  sphereVolume = 4 * pi * pow(sphereRadius,3.0)/3.0;
 		  cout <<"The volume is: "<<sphereVolume<<endl;
 		  
 		  //Calculate Volume of cylinder
@@ -211,7 +204,7 @@ int main(int argc, const char * argv[])
 			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
-		  cylinderSA = (2.0*pi*cylinderRadius*cylinderHeight) + (2.0*pi*pow(cylinderRadius,2));
+		  cylinderSA = (2.0*pi*cylinderRadius*cylinderHeight) + (2.0*pi*pow(cylinderRadius,2.0));
 		  cout<<"The surface area is: "<<cylinderSA<<endl;
 		  
 		  //calculate volume of a cube
@@ -228,7 +221,7 @@ int main(int argc, const char * argv[])
 			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
-		  cubeVolume = pow(cubeEdge,3);
+		  cubeVolume = pow(cubeEdge,3.0);
 		  cout<<"The volume of the cube is: "<<cubeVolume<<" "<<cubeUnits<<volumeSuffix<<endl;
 		  
 		  //Surface area of cube
@@ -239,14 +232,14 @@ int main(int argc, const char * argv[])
 			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
-		  cubeSA = 6*pow(cubeEdge,2);
+		  cubeSA = 6*pow(cubeEdge,2.0);
 		  cout<<"The surface area of the cube is: "<<cubeSA<<" " <<cubeUnits<<SASuffix<<endl;
 		  
 		  //Perimeter of cube
 		  cout <<"===============Perimeter of a cube============================"<<endl;
 		  cout<<"Number of edges: "<<endl;
 		  cin >> cubeEdge;
-		  if(cubeEdge <=0){
+		  if(cubeEdge <=0.0){
 			   cout<<"The length cannot be negative!"<<cubeUnits<<endl;
 			   break;
 		  }
@@ -262,7 +255,7 @@ int main(int argc, const char * argv[])
 		  cout<<"Please note that imaginary numbers are not yet supported.  If the value under the radical is negative, the program will exit.  Simarily, the denomiator cannot be equal to 0."<<endl;
 		  cout<<"Enter value of a"<<endl;
 		  cin >> a;
-		  if (a == 0 ){
+		  if (a == 0.0 ){
 			   cout <<"value of 'a' cannot be equal to 0!"<<endl;
 			   break;
 		  }
@@ -278,14 +271,14 @@ int main(int argc, const char * argv[])
 		  quadC = 2*a;
 		  quadD = pow(b, 2)-4*a*c;
 		  //value inside radical is negative
-		  if (quadB < 0){
+		  if (quadB < 0.0){
 			   break;
 		  }//demoninator is 0
-		  else if (quadC == 0){
+		  else if (quadC == 0.0){
 			   cout <<"Demoniator must be greater than 0!"<< endl;
 			   break;
 			   //Value under radical is negative
-		  }else if (quadD < 0){
+		  }else if (quadD < 0.0){
 			   cout <<"The value under the radical cannot be less than 0!"<<endl;
 			   break;
 		  }
@@ -313,7 +306,7 @@ int main(int argc, const char * argv[])
 		  if (pyrWidth <= 0.0) {
 			   break;
 		  }
-		  pyrVolume = (pyrLength * pyrWidth * pyrHeight)/3;
+		  pyrVolume = (pyrLength * pyrWidth * pyrHeight)/3.0;
 		  cout<<"The volume is: "<<pyrVolume<<" "<<pyrUnits<<volumeSuffix<<endl;
 		  
 		  //surface area of pyramid
@@ -339,8 +332,8 @@ int main(int argc, const char * argv[])
 		  
 		  //Separate formula into 3 parts.  Then combine and output result.
 		  pyrA = (pyrLength * pyrWidth);
-		  pyrB = pow(pyrWidth/2, 2)+pow(pyrHeight, 2);
-		  pyrC = pow(pyrLength/2, 2)+ pow(pyrHeight, 2);
+		  pyrB = pow(pyrWidth/2, 2)+pow(pyrHeight, 2.0);
+		  pyrC = pow(pyrLength/2, 2)+ pow(pyrHeight, 2.0);
 		  pyrSA = pyrA + (pyrLength * sqrt(pyrB)) + pyrWidth * sqrt(pyrC);
 		  cout<<"The Surface Area is: "<<pyrSA<<" "<<pyrUnits<<SASuffix<<endl;
 		  
