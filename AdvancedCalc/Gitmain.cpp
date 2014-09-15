@@ -73,9 +73,10 @@ int main(int argc, const char * argv[])
 	double pyrWidth;
 	double pyrLength;
 	double pyrA, pyrB, pyrC;
-	double frustumR;
-	double frustumr;
+	double frustum_R;
+	double frustum_r;
 	double frustumHeight;
+	double frustumA,frustumB;
 	double q, w, e, r;
 	double solveA, solveB, solveC, solveD, solveE;
 
@@ -364,7 +365,6 @@ int main(int argc, const char * argv[])
 		cout << "Enter the height " << endl;
 		cin >> pyrHeight;
 		if (pyrHeight <= 0.0){
-		    cout<<"You must have a positive value!"<<endl;
             cin.get();
 			break;
 		}
@@ -375,6 +375,28 @@ int main(int argc, const char * argv[])
 		pyrC = pow(pyrLength / 2, 2) + pow(pyrHeight, 2.0);
 		pyrSA = pyrA + (pyrLength * sqrt(pyrB)) + pyrWidth * sqrt(pyrC);
 		cout << "The Surface Area is: " << pyrSA << " " << pyrUnits << SASuffix << endl;
+
+        cout<<"===========Frustum============="<<endl;
+        cout << "Please enter the height: " << endl;
+        cin >> frustumHeight;
+        if (frustumHeight < 0){
+            cout<<"You must have a positive value!"<<endl;
+            cin.get();
+        }
+        cout << "Please enter the radius of the small circle: " << endl;
+        cin >> frustum_r;
+        cout<<"You must have a positive value!"<<endl;
+        cin.get();
+        cout << "Please enter the radius of the larger circle: " << endl;
+        cin >> frustum_R;
+        cout<<"You must have a positive value!"<<endl;
+        cin.get();
+        // calculate volume of frustum
+        frustumA = (pi * frustumHeight) * (pow(frustum_R,2) + frustum_R * frustum_r + pow(frustum_r,2));
+        frustum = frustumA/3;
+        //display
+        cout << "The volume of the frustum is: " << frustum << endl;
+
 
 		//Distance
 		cout << "================Distance calculator========================" << endl;
@@ -418,12 +440,8 @@ int main(int argc, const char * argv[])
 		solveC = pow(solveB, 3);
 		solveD = 7 * pow(e, 4);
 		solveE = 8 * (3 * e - r);
-
 		solve = solveA + solveC - solveD + solveE;
-
 		cout << solve;
-
-
 	}
 
 
