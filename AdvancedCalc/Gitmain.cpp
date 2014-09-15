@@ -71,6 +71,12 @@ int main(int argc, const char * argv[])
 	 double pyrWidth;
 	 double pyrLength;
 	 double pyrA,pyrB, pyrC;
+	 double frustumR;
+	 double frustumr;
+	 double frustumHeight;
+	 double q,w,e,r;
+	 double solveA,solveB,solveC,solveD,solveE;
+	 
 	 
 	 ///Solvers and formulas
 	 double circleArea; //Done!
@@ -86,6 +92,8 @@ int main(int argc, const char * argv[])
 	 double pyrVolume;//Done!
 	 double pyrSA;//Done!
 	 double distance;//Done!
+	 double frustum;
+	 double solve;
 	 
 	 /*TODO
 	  Frustum
@@ -118,8 +126,9 @@ int main(int argc, const char * argv[])
 	 //Program starts here and loops infinitely until the user triggers the else statement, enters a non-double or negative value
 	 while (true) {
 		  //Calculate the Area of a circle
+		  cout <<endl;
 		  cout <<"===============Area of a circle===================="<<endl;
-		  cout <<"Enter the radius: " <<endl;
+		  cout <<"Enter the radius: ";
 		  cin >> circleRadius;
           if (circleRadius <= 0.0 ){
 			   break;
@@ -162,7 +171,7 @@ int main(int argc, const char * argv[])
 			   cout<<"The length cannot be negative!"<<endl;
 			   break;
 		  }
-		  cout <<"Enter the height of the sphere: "<<endl;
+		  
 		  
 		  //Volume = (4 * pi * r^2)/3
 		  sphereVolume = 4 * pi * pow(sphereRadius,3.0)/3.0;
@@ -356,7 +365,33 @@ int main(int argc, const char * argv[])
 		  cin >> solveDistanceUnits;
 		  cout<<"The distance is: "<<distance<<" "<<solveDistanceUnits<<"/"<<"second"<<endl;
 		  
+		  
+		  cout<<"===============Custom Expression================="<<endl;
+		  cout<<"5a + (3-b^2)^3 -7c^4 +8(3c-d)"<<endl;
+		  //a,b,c,d =
+		  //q,w,e,r
+		  cout <<"enter a: "<<endl;
+		  cin>>q;
+		  cout <<"enter b: "<<endl;
+		  cin>>w;
+		  cout <<"Enter c: "<<endl;
+		  cin>>e;
+		  cout <<"Enter d: "<<endl;
+		  cin>>r;
+		  
+		  solveA = 5 *q;
+		  solveB = 3 - pow(w, 2);
+		  solveC = pow(solveB, 3);
+		  solveD = 7 * pow(e, 4);
+		  solveE = 8 * (3 * e -r);
+		  
+		  solve = solveA + solveC - solveD + solveE;
+		  
+		  cout<<solve;
+		  
+		  
 	 }
+	 
 	 
 	 return 0;
 }
