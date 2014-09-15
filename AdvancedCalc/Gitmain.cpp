@@ -186,13 +186,13 @@ int main(int argc, const char * argv[])
 		  cout <<"Enter the radius: "<<endl;
 		  cin >> cylinderRadius;
 		  if (cylinderRadius <= 0.0){
-			   cout<<"The length cannot be negative!"<<endl;
+			   cout<<"The length cannot be negative or 0!"<<endl;
 			   break;
 		  }
 		  cout <<"Enter the height: "<<endl;
 		  cin >> cylinderHeight;
 		  if(cylinderHeight <= 0.0){
-			   cout<<"The length cannot be negative!"<<endl;
+			   cout<<"The length cannot be negative or 0!"<<endl;
 			   break;
 		  }
 		  cylinderVolume = cylinderHeight * pi * pow(cylinderRadius,2.0);
@@ -204,13 +204,13 @@ int main(int argc, const char * argv[])
 		  
 		  cin >>cylinderRadius;
 		  if(cylinderRadius <= 0.0){
-			   cout<<"The length cannot be negative!"<<endl;
+			   cout<<"The length cannot be negative or 0!"<<endl;
 			   break;
 		  }
 		  cout<<"Enter the height: "<<endl;
 		  cin >> cylinderHeight;
 		  if (cylinderHeight <= 0.0){
-			   cout<<"The length cannot be negative!"<<endl;
+			   cout<<"The length cannot be negative or 0!"<<endl;
 			   break;
 		  }
 		  cylinderSA = (2.0*pi*cylinderRadius*cylinderHeight) + (2.0*pi*pow(cylinderRadius,2.0));
@@ -226,8 +226,8 @@ int main(int argc, const char * argv[])
 		  cin >> cubeUnits;
 		  cout<<"Number of edges[12 edges in a cube.  All equal length]: "<<endl;
 		  cin >>cubeEdge;
-		  if(cubeEdge <= 0){
-			   cout<<"The length cannot be negative!"<<endl;
+		  if(cubeEdge <= 0.0){
+			   cout<<"The length cannot be negative or 0!"<<endl;
 			   break;
 		  }
 		  cubeVolume = pow(cubeEdge,3.0);
@@ -237,8 +237,8 @@ int main(int argc, const char * argv[])
 		  cout<<"=================Surface Area of a Cube========================"<<endl;
 		  cout<<"Number of edges: "<<endl;
 		  cin >> cubeEdge;
-		  if(cubeEdge <= 0){
-			   cout<<"The length cannot be negative!"<<endl;
+		  if(cubeEdge <= 0.0){
+			   cout<<"The length cannot be negative or 0!"<<endl;
 			   break;
 		  }
 		  cubeSA = 6*pow(cubeEdge,2.0);
@@ -249,7 +249,7 @@ int main(int argc, const char * argv[])
 		  cout<<"Number of edges: "<<endl;
 		  cin >> cubeEdge;
 		  if(cubeEdge <=0.0){
-			   cout<<"The length cannot be negative!"<<cubeUnits<<endl;
+			   cout<<"The length cannot be negative or 0!"<<cubeUnits<<endl;
 			   break;
 		  }
 		  cubePerimeter = 12*cubeEdge;
@@ -367,7 +367,7 @@ int main(int argc, const char * argv[])
 		  
 		  
 		  cout<<"===============Custom Expression================="<<endl;
-		  cout<<"5a + (3-b^2)^3 -7c^4 +8(3c-d)"<<endl;
+		  //5a + (3-b^2)^3 -7c^4 +8(3c-d)
 		  //a,b,c,d =
 		  //q,w,e,r
 		  cout <<"enter a: "<<endl;
