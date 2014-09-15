@@ -367,7 +367,7 @@ int main(int argc, const char * argv[])
 		  
 		  
 		  cout<<"===============Custom Expression================="<<endl;
-		  //5a + (3-b^2)^3 -7c^4 +8(3c-d)
+		  cout<<"5a + (3-b^2)^3 -7c^4 +8(3c-d)"<<endl;
 		  //a,b,c,d =
 		  //q,w,e,r
 		  cout <<"enter a: "<<endl;
