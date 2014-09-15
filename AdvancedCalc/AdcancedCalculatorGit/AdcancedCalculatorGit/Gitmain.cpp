@@ -4,7 +4,7 @@
 using namespace std;
 int main(int argc, const char * argv[])
 {
-	 //testing 1 2 3
+	 //testing 1 2 3!!
 	 /*
 	  d = vt
 	  Distance
