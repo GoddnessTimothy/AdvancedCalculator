@@ -1,9 +1,11 @@
 #include <iostream>
+#include <cstdio>
 #include <math.h>
 #include <string>
 using namespace std;
 int main(int argc, const char * argv[])
 {
+//changes from windows
 
 	/*
 	d = vt
@@ -108,8 +110,6 @@ int main(int argc, const char * argv[])
 		"Note: I hardcoded the value of pi to be '3.14159'\n"
 		"Please also note that you are not limited to some of the suggested units in [].  They are there as examples." << endl;
 	cout << endl << endl;
-	cout<<"test"<<endl;
-
 	//Neat feature menu.  Easy to maintain.
 	cout << "List of features:\n"
 		"\tArea of a circle\n"
@@ -132,7 +132,9 @@ int main(int argc, const char * argv[])
 		cout << "Enter the radius: ";
 		cin >> circleRadius;
 		if (circleRadius <= 0.0){
-			break;
+            cout<<"You must have a positive value!"<<endl;
+            cin.get();
+            break;
 		}
 		circleArea = pi * pow(circleRadius, 2.0);
 		cout << "The area of the circle is: " << circleArea << endl;
@@ -143,7 +145,8 @@ int main(int argc, const char * argv[])
 		cout << "Enter the radius: " << endl;
 		cin >> circleRadius;
 		if (circleRadius <= 0.0){
-			cout << "The length cannot be negative!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		circleCircumference = 2.0*pi*circleRadius;
@@ -155,7 +158,8 @@ int main(int argc, const char * argv[])
 		cout << "Enter the radius: " << endl;
 		cin >> sphereRadius;
 		if (sphereRadius <= 0.0){
-			cout << "The length cannot be negative!" << endl;
+            cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		};
 		//Surface Area = 4 * pi * r^2
@@ -169,7 +173,8 @@ int main(int argc, const char * argv[])
 		cin >> sphereRadius;
 
 		if (sphereRadius <= 0.0){
-			cout << "The length cannot be negative!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 
@@ -187,13 +192,15 @@ int main(int argc, const char * argv[])
 		cout << "Enter the radius: " << endl;
 		cin >> cylinderRadius;
 		if (cylinderRadius <= 0.0){
-			cout << "The length cannot be negative or 0!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cout << "Enter the height: " << endl;
 		cin >> cylinderHeight;
 		if (cylinderHeight <= 0.0){
-			cout << "The length cannot be negative or 0!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cylinderVolume = cylinderHeight * pi * pow(cylinderRadius, 2.0);
@@ -205,13 +212,15 @@ int main(int argc, const char * argv[])
 
 		cin >> cylinderRadius;
 		if (cylinderRadius <= 0.0){
-			cout << "The length cannot be negative or 0!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cout << "Enter the height: " << endl;
 		cin >> cylinderHeight;
 		if (cylinderHeight <= 0.0){
-			cout << "The length cannot be negative or 0!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cylinderSA = (2.0*pi*cylinderRadius*cylinderHeight) + (2.0*pi*pow(cylinderRadius, 2.0));
@@ -228,7 +237,8 @@ int main(int argc, const char * argv[])
 		cout << "Number of edges[12 edges in a cube.  All equal length]: " << endl;
 		cin >> cubeEdge;
 		if (cubeEdge <= 0.0){
-			cout << "The length cannot be negative or 0!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cubeVolume = pow(cubeEdge, 3.0);
@@ -239,7 +249,8 @@ int main(int argc, const char * argv[])
 		cout << "Number of edges: " << endl;
 		cin >> cubeEdge;
 		if (cubeEdge <= 0.0){
-			cout << "The length cannot be negative or 0!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cubeSA = 6 * pow(cubeEdge, 2.0);
@@ -251,6 +262,7 @@ int main(int argc, const char * argv[])
 		cin >> cubeEdge;
 		if (cubeEdge <= 0.0){
 			cout << "The length cannot be negative or 0!" << cubeUnits << endl;
+			cin.get();
 			break;
 		}
 		cubePerimeter = 12 * cubeEdge;
@@ -267,6 +279,7 @@ int main(int argc, const char * argv[])
 		cin >> a;
 		if (a == 0.0){
 			cout << "value of 'a' cannot be equal to 0!" << endl;
+			cin.get();
 			break;
 		}
 		cout << "Enter value of b" << endl;
@@ -282,15 +295,18 @@ int main(int argc, const char * argv[])
 		quadD = pow(b, 2) - 4 * a*c;
 		//value inside radical is negative
 		if (quadB < 0.0){
+            cin.get();
 			break;
 		}//demoninator is 0
 		else if (quadC == 0.0){
-			cout << "Demoniator must be greater than 0!" << endl;
+			cout << "Denominator must be greater than 0!" << endl;
+            cin.get();
 			break;
 			//Value under radical is negative
 		}
 		else if (quadD < 0.0){
-			cout << "The value under the radical cannot be less than 0!" << endl;
+			cout<<"You must have a positive value!"<<endl;
+			cin.get();
 			break;
 		}
 
@@ -305,16 +321,22 @@ int main(int argc, const char * argv[])
 		cout << "Enter the height: " << endl;
 		cin >> pyrHeight;
 		if (pyrHeight <= 0.0) {
+		    cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cout << "Enter the length: " << endl;
 		cin >> pyrLength;
 		if (pyrLength <= 0.0) {
+		    cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cout << "Enter the width: " << endl;
 		cin >> pyrWidth;
 		if (pyrWidth <= 0.0) {
+            cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		pyrVolume = (pyrLength * pyrWidth * pyrHeight) / 3.0;
@@ -328,16 +350,22 @@ int main(int argc, const char * argv[])
 		cout << "Enter the length: " << endl;
 		cin >> pyrLength;
 		if (pyrLength <= 0.0) {
+            cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cout << "Enter the width: " << endl;
 		cin >> pyrWidth;
 		if (pyrWidth <= 0.0) {
+		    cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cout << "Enter the height " << endl;
 		cin >> pyrHeight;
 		if (pyrHeight <= 0.0){
+		    cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 
@@ -355,11 +383,15 @@ int main(int argc, const char * argv[])
 		cout << "Enter the speed[m/s,km/s]: " << endl;
 		cin >> speed;
 		if (speed<0.0) {
+            cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		cout << "Enter the time[seconds]: " << endl;
 		cin >> time;
 		if (time <0.0) {
+		    cout<<"You must have a positive value!"<<endl;
+            cin.get();
 			break;
 		}
 		distance = speed * time;
