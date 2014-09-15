@@ -76,7 +76,7 @@ int main(int argc, const char * argv[])
 	double frustum_R;
 	double frustum_r;
 	double frustumHeight;
-	double frustumA,frustumB;
+	double frustumA;
 	double q, w, e, r;
 	double solveA, solveB, solveC, solveD, solveE;
 
@@ -382,15 +382,20 @@ int main(int argc, const char * argv[])
         if (frustumHeight < 0){
             cout<<"You must have a positive value!"<<endl;
             cin.get();
+            break;
         }
         cout << "Please enter the radius of the small circle: " << endl;
         cin >> frustum_r;
-        cout<<"You must have a positive value!"<<endl;
-        cin.get();
+        if (frustum_r < 0){
+            cout<<"You must have a positive value!"<<endl;
+            cin.get();
+            break;}
         cout << "Please enter the radius of the larger circle: " << endl;
         cin >> frustum_R;
-        cout<<"You must have a positive value!"<<endl;
-        cin.get();
+        if (frustum_R < 0){
+            cout<<"You must have a positive value!"<<endl;
+            cin.get();
+            break;}
         // calculate volume of frustum
         frustumA = (pi * frustumHeight) * (pow(frustum_R,2) + frustum_R * frustum_r + pow(frustum_r,2));
         frustum = frustumA/3;
